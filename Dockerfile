@@ -27,13 +27,13 @@ RUN apk add --no-cache bash
 # RUN chmod +x script.sh
 
 # You only need to copy next.config.js if you are NOT using the default configuration
-COPY --from=builder /usr/src/app/next.config.js ./
+# COPY --from=builder /usr/src/app/next.config.js ./
 COPY --from=builder /usr/src/app/public ./public
 COPY --from=builder /usr/src/app/.next ./.next
 COPY --from=builder /usr/src/app/node_modules ./node_modules
 COPY --from=builder /usr/src/app/package.json ./package.json
 
-EXPOSE 3000
+EXPOSE 80
 
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
