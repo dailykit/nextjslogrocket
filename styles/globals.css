@@ -14,3 +14,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.container {
+   background: #111;
+   color: #fff;
+}
